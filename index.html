@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>基于移动端的课程管理系统给的设计与开发</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+		<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+		<!-- <link rel="stylesheet" href="css/swiper-3.4.2.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+		<link rel="stylesheet" href="css/page.css">
+		<link rel="short icon" href="img/ico(1).ico">
+	</head>
+	<body>
+		<header class="com-header">
+			<a href="index.html" class="pro-brand">
+						<span class="logo"></span>
+					</a>
+			<p class="com-title">课程管理</p>
+		</header>
+		<div class="content-area">
+			<div class="swiper-container swiper-container-horizontal">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="http://www.baidu.com">
+						<img src="img/shuijiao.jpg" alt="">
+					</a>
+					<a class="swiper-slide" href="http://www.sina.com">
+						<img src="img/cbd.jpg" alt="">
+					</a>
+					<a class="swiper-slide" href="http://www.sohu.com">
+						<img src="img/muwu.jpg" alt="">
+					</a>
+					<a class="swiper-slide" href="http://www.csdn.com">
+						<img src="img/yuantiao.jpg" alt="">
+					</a>
+				</div>
+				<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+					<span class="swiper-pagination-bullet">1</span>
+					<span class="swiper-pagination-bullet">2</span>
+					<span class="swiper-pagination-bullet">3</span>
+					<span class="swiper-pagination-bullet">4</span>
+				</div>
+			</div>
+			<div class="index-content">
+				<ul class="guide-box">
+					<li class="guide-item">
+						<a href="course.html">
+							<span class="class-base"></span>
+							<p>基础课程</p>
+						</a>
+					</li>
+					<li class="guide-item">
+						<a href="comunicate.html">
+							<span class="class-communite"></span>
+							<p>课程交流</p>
+						</a>
+					</li>
+					<li class="guide-item">
+						<a href="judge.html">
+							<span class="class-judge"></span>
+							<p>课程评价</p>
+						</a>
+					</li>
+					<li class="guide-item">
+						<a href="#">
+							<span class="class-homwork"></span>
+							<p>课程作业</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<nav class="com-footer">
+			<a href="index.html" class="tab-item active">
+				<span class="iconfont icon-shouye"></span>
+				<span class="tab-item-label">首页</span>
+			</a>
+			<a href="course.html" class="tab-item">
+				<span class="iconfont icon-kecheng"></span>
+				<span class="tab-item-label">课表</span>
+			</a>
+			<a href="#askqaq" class="tab-item">
+				<span class="iconfont icon-tiwen"></span>
+				<span class="tab-item-label">提问</span>
+			</a>
+			<a href="personal.html" class="tab-item">
+				<span class="iconfont icon-me"></span>
+				<span class="tab-item-label">我的</span>
+			</a>
+		</nav>
+		<script src="js/swiper.js"></script>
+		<script src="js/angular.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script>
+			var swiper=new Swiper('.swiper-container',{
+				pagination:'.swiper-pagination',
+				paginationClickable:true,
+				autoplay:2500,
+				autoplayDisableOnInteraction:false,
+				paginationBulletRender: function (swiper, index, className) {
+	            return '<span class="' + className + '">' + (index + 1) + '</span>';
+	       		}
+			});
+		</script>
+	</body>
+</html>

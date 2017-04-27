@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>个人中心</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+	<link rel="stylesheet" href="css/page.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<link rel="short icon" href="img/ico(1).ico">
+	<style type="text/css">
+		body { background-color:#efeff4; }
+		.person-table {
+		    position: relative;
+		    margin-top: 20px;
+		    margin-bottom: 0;
+		    padding-left: 0;
+		    list-style: none;
+		    background-color: #fff;
+		    font-size: 1.2em;
+		}
+		.person-table-cell { padding:11px 65px 11px 15px; position: relative;}
+		.person-table-cell:after { position: absolute; content: ""; height:1px; background-color:#ddd; width: 100%; left:15px; bottom:0; right:0;}
+		.person-table-cell > a{ display: inline-block; width: 100%; 
+		    color:#333;}
+		.person-table-cell > a > span { position: absolute; top:10px; right:25px; }
+
+	</style>
+</head>
+<body>
+	<header class="com-header">
+		<a href="javascript:history.back(-1)" class="pro-back">
+			<span class="iconfont icon-arrow-left"></span>
+			<span class="c-back">返回</span>
+		</a>
+		<p class="com-title">个人中心</p>
+	</header>
+	<div class="content-area">
+		<div class="person-logo">
+			<img src="img/shi.png" alt="">
+			<p>榴莲味的屎</p>
+		</div>
+		<ul class="person-table">
+			<li class="person-table-cell"><a href="#">修改密码<span class="iconfont icon-arrow-right"></span></a></li>
+		</ul>
+		<ul class="person-table">
+			<li class="person-table-cell" style="text-align:center;padding-right:15px;"><a href="#">注销登录</a></li>
+		</ul>
+	</div>
+	<nav class="com-footer">
+		<a href="index.html" class="tab-item active">
+			<span class="iconfont icon-shouye"></span>
+			<span class="tab-item-label">首页</span>
+		</a>
+		<a href="course.html" class="tab-item">
+			<span class="iconfont icon-kecheng"></span>
+			<span class="tab-item-label">课表</span>
+		</a>
+		<a href="#askqaq" class="tab-item">
+			<span class="iconfont icon-tiwen"></span>
+			<span class="tab-item-label">提问</span>
+		</a>
+		<a href="personal.html" class="tab-item">
+			<span class="iconfont icon-me"></span>
+			<span class="tab-item-label">我的</span>
+		</a>
+	</nav>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$(".comunicate-title li").on("click",function(){
+			var comuniIndex=$(this).index();
+			$(this).addClass("active").siblings("li").removeClass("active");
+			$(".comunicate-lists").eq(comuniIndex).addClass("show").siblings(".comunicate-lists").removeClass("show");
+		});
+	</script>
+</body>
+</html>
