@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>课程评价</title>
+	<title>课程交流</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
 	<link rel="stylesheet" href="css/page.css">
@@ -12,13 +12,17 @@
 		<a href="javascript:history.back(-1)" class="pro-back">
 			<span class="iconfont icon-arrow-left"></span>
 		</a>
-		<p class="com-title">课程评价</p>
+		<p class="com-title">课程交流</p>
 	</header>
 	<div class="content-area">
-		<div class="comunicate-lists">
+		<ul class="comunicate-title">
+			<li class="active"><a href="comunicate-student.html">学生意见</a></li>
+			<li><a href="comunicate-problem.html">教学问题</a></li>
+		</ul>
+		<div class="comunicate-lists stu-view">
 			<ul class="person-lists">
 				<li>
-					<a href="judge-detail.html">
+					<a href="comunicate-detail.html">
 						<div class="stu-view-logo">
 							<img src="img/shi.png" alt="">
 							<p>榴莲味的屎</p>
@@ -31,7 +35,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="judge-detail.html">
+					<a href="comunicate-detail.html">
 						<div class="stu-view-logo">
 							<img src="img/shi.png" alt="">
 							<p>榴莲味的屎</p>
@@ -44,7 +48,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="judge-detail.html">
+					<a href="comunicate-detail.html">
 						<div class="stu-view-logo">
 							<img src="img/shi.png" alt="">
 							<p>榴莲味的屎</p>
@@ -57,10 +61,25 @@
 					<span class="iconfont icon-arrow-right i-position "></span>
 				</li>				
 			</ul>
-		</div>
+			<p class="line"><span>提交意见</span></p> 
+			<form class="form-publishmsg">
+			<label>标题:</label>
+			<input class="push-tit" type="text" value="" placeholder="请输入标题"></br>
+			<label>内容:</label>
+			<div class="pushmsg">
+			    <textarea rows="5" class="pushmsg" onfocus="document.getElementById('note').style.display='none'" onblur="if(value=='')document.getElementById('note').style.display='block'"></textarea>
+			    <div id="note" class="note">
+			        <font color="#777">在这里写入你的意见</font>
+			    </div>
+			</div>
+			<button class="btns btn-cancle">取消</button>
+			<button class="btns btn-sure">发表</button>
+		
+			</form>
+		</div>	
 	</div>
 	<nav class="com-footer">
-		<a href="index.html" class="tab-item active">
+		<a href="index.html" class="tab-item">
 			<span class="iconfont icon-shouye"></span>
 			<span class="tab-item-label">首页</span>
 		</a>
@@ -78,4 +97,23 @@
 		</a>
 	</nav>
 	<script src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		// $(".comunicate-title li").on("click",function(){
+		// 	var comuniIndex=$(this).index();
+		// 	$(this).addClass("active").siblings("li").removeClass("active");
+		// 	$(".comunicate-lists").eq(comuniIndex).addClass("show").siblings(".comunicate-lists").removeClass("show");
+		// });
+		$(".input-clear").focus(function(){
+			console.log($(".input-placeholder"));
+			$(".input-placeholder").addClass("hidden");
+			$(".input-search .iconsearch").removeClass("hidden");
+		});
+		$(".input-clear").blur(function(){
+			if($(".input-clear").val()==""){
+				$(".input-placeholder").removeClass("hidden");
+				$(".input-search .iconsearch").addClass("hidden");
+			}
+		});
+	</script>
+</body>
 </html>

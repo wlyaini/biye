@@ -5,7 +5,7 @@ html,body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color:#333; margin:0; padding:0;}
 ul { padding:0; list-style:none; margin:0; }
 p { margin:0;}
-a,a:focus,a:hover,a:visited,a:focus { text-decoration: none;}
+a,a:focus,a:hover,a:visited,a:focus,a:active { text-decoration: none; color:#333;}
 input { outline: none;}
 h1,h2,h3,h4,h5,h6 { margin:0;}
 textarea { padding:10px; resize:none; height:auto; width:100%; outline:none; overflow-y: auto; }
@@ -78,17 +78,23 @@ textarea { padding:10px; resize:none; height:auto; width:100%; outline:none; ove
 /*课程交流页面*/
 .comunicate-title li { width:50%; float:left; text-align: center; height:40px; line-height: 40px;}
 .comunicate-title li.active { background:#f76735; color:#fff; font-weight: bold; }
-.teaching-qaq,.stu-view { display: none;}
-.teaching-qaq.show,.stu-view.show { display: block;}
+/*.teaching-qaq,.stu-view { display: none;}
+.teaching-qaq.show,.stu-view.show { display: block;}*/
 .input { outline: 0;}
 .publishmsg { position: relative;}
 .note{ position:absolute; line-height:20px; padding: 3px 10px; z-index: 9; top: 7px;}
-.push-tit { width:50%;     height: 30px; text-indent: 5px;}
+.push-tit { width:100%;     height: 30px; text-indent: 5px;}
 .pushmsg { position: relative;}
 .form-publishmsg { padding:0 15px;}
 .btns { margin-top:10px; padding:10px; outline:0; border:0;}
 .btn-cancle,.btn-sure { background: #f76735; color:#fff; width: 49%; height:35px; border-radius: 5px; }
 /*个人中心页面*/
+.person-table { position: relative; margin-top: 20px; margin-bottom: 0;  padding-left: 0;  list-style: none; background-color: #fff; font-size: 1.2em; }
+.person-table-cell { padding:11px 65px 11px 15px; position: relative;}
+.person-table-cell:after { position: absolute; content: ""; height:1px; background-color:#ddd; width: 100%; left:15px; bottom:0; right:0;}
+.person-table-cell > a{ display: inline-block; width: 100%; 
+color:#333;}
+.person-table-cell > a > span { position: absolute; top:10px; right:25px; }
 .person-logo { height:150px; text-align: center; padding-top:20px;}
 .person-logo img { height:80px; width: 80px; border: 1px solid #ccc; margin-top:20px;}
 .person-logo p {  padding: 20px 0;}
@@ -123,6 +129,8 @@ textarea { padding:10px; resize:none; height:auto; width:100%; outline:none; ove
 .responce-text .btn-publish { vertical-align: top; width: 18%; height: 40px; margin-top: 12px; border-radius: 5px; font-size: 1.2em; color: #007AFF;}
 .responce-text .btn-publish:active { background: rgba(200,200,200,1);}
 .comunicate-title { overflow: hidden; border-bottom: 1px solid #ddd;}
+.comunicate-title li a { width: 100%; display: inline-block; }
+.comunicate-title li.active a { color:#fff; }
 .stu-view-logo { display: inline-block; text-align: center; max-width: 60px; margin-right: 10px; float: left; }
 .stu-view-logo img {max-width: 50px; height: 50px; margin: 0 auto;  }
 .stu-view-logo p { margin: 6px 0 0; font-size: 0.8em; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; width: 100% }
@@ -144,3 +152,25 @@ textarea { padding:10px; resize:none; height:auto; width:100%; outline:none; ove
 .link-area { display: block; margin-top: 25px; text-align: center; }
 .link-area a { color:#007aff; }
 .spliter { color: #bbb; padding: 0px 8px; }
+/*课程评价详情*/
+.choose-item { font-size:1.2em; margin:10px 0; padding:10px;}
+.chooses { position: relative; background: #fff; padding:10px; border-bottom: 1px solid #ddd;}
+.question { margin-bottom:10px; }
+.choose-radio-input { width: 20px; height:20px; vertical-align: middle; float: left; margin:0; position: absolute; top:10px; left:20px; }
+.choose-radio { display: block; padding-left:50px;}
+.btn-tijiao { width: 100%; }
+/*课程作业页面*/
+.guide-homework-title { text-align: center; margin:20px; }
+.guide-homework { width: 100%;}
+.guide-homework li { width: 50%;float:left;padding:10px 0px;overflow:hidden;text-align:center;}
+.guide-homework li a { display: block;}
+.guide-homework li p { margin-top:15px;}
+.guide-homework li img { width: 80%; height: 150px; border-radius:5px;}
+/*课程作业详情*/
+.detail-content .tip { font-size: 16px; }
+.tip { padding-bottom:10px; }
+.tip span { padding-left:5px; }
+.tip-content { padding:10PX; }
+.file { position: relative; }
+.file input { position: absolute; width: 100%; height:100%; top:0;left:0; }
+
